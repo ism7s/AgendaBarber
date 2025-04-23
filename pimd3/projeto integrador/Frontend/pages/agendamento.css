@@ -1,0 +1,187 @@
+/* Reset e Variáveis */
+:root {
+    --azul-escuro: #2c3e50;
+    --azul-claro: #3498db;
+    --cinza-claro: #f4f5f7;
+    --cinza-medio: #bdc3c7;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Layout Principal */
+body {
+    display: flex;
+    min-height: 100vh;
+    background: var(--cinza-claro);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--azul-escuro);
+    color: var(--branco);
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.menu-lista {
+    list-style: none;
+}
+
+.menu-lista li {
+    margin: 15px 0;
+}
+
+.menu-lista a {
+    color: var(--branco);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.menu-lista a:hover {
+    color: var(--azul-claro);
+}
+
+/* Conteúdo Principal */
+.content {
+    flex: 1;
+    padding: 40px;
+    background: url('../images/barbershop-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+.content > * {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 28px;
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Etapas */
+.etapas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.etapa {
+    width: 24px;
+    height: 24px;
+    background: var(--cinza-medio);
+    color: var(--branco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.etapa.ativa {
+    background: var(--azul-escuro);
+}
+
+.linha {
+    height: 2px;
+    background: #ccc;
+    flex: 1;
+}
+
+/* Alerta */
+.alerta {
+    background: #dfe6e9;
+    border-left: 3px solid var(--azul-claro);
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--azul-escuro);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 400px;
+}
+
+/* Formulário */
+.formulario {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    position: relative;
+}
+
+.campo i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: var(--branco);
+    font-size: 14px;
+}
+
+button {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #1a252f;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Barber - Agendamento</title>
+    <link rel="stylesheet" href="agendamento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2e0e6fdd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul class="menu-lista">
+                <li>
+                    <a href="#"><i class="fas fa-info-circle"></i> Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-phone-alt"></i> Contato</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h1>Bem-vindo!</h1>
+        <p class="subtitle">Agende seu horário de forma rápida e fácil!</p>
+
+        <div class="etapas">
+            <span class="etapa ativa">1</span>
+            <span class="linha"></span>
+            <span class="etapa">2</span>
+            <span class="linha"></span>
+            <span class="etapa">3</span>
+        </div>
+
+        <div class="alerta">
+            <i class="fas fa-info-circle"></i>
+            <span>Verifique se os dados estão corretos antes de confirmar.</span>
+        </div>
+
+        <form class="formulario">
+            <div class="campo">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="campo">
+                <i class="fas fa-cut"></i>
+                <select required>
+                    <option disabled selected>Selecione um serviço</option>
+                    <option value="cabelo">Corte de Cabelo - R$20</option>
+                    <option value="barba">Barba - R$15</option>
+                    <option value="combo">Cabelo e Barba - R$35</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" required>
+            </div>
+
+            <div class="campo">
+                <i class="fas fa-clock"></i>
+                <input type="time" required>
+            </div>
+
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+    </main>
+</body>
+</html>
